@@ -1,0 +1,19 @@
+{
+  "name": "elegance-sdk-template-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "dotenv -- npm run build --workspaces",
+    "dev": "dotenv -- npm run dev --workspaces"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "./client"
+  ],
+  "devDependencies": {
+    "dotenv-cli": "^7.3.0"
+  }
+}
