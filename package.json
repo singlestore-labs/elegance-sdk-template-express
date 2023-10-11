@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "workspaces": [
-    "./client"
+    "./client",
+    "./server"
   ],
   "devDependencies": {
     "dotenv-cli": "^7.3.0"
