@@ -8,11 +8,7 @@
 4. Start development environment by running: `npm run dev`
 5. Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-## Start Production Environment
+## Build
 
-1. Sign up for [SingleStore](https://www.singlestore.com/) and create a database
-2. Create an `.env` file based on the `.env.sample` file
-3. Install dependencies by running: `npm i`
-4. Build the application once by running: `npm run build`
-5. Start the application by running: `npm run start`
-6. Open [http://localhost:3000](http://localhost:3000) with your browser.
+To build project run `npm run build` in the root of the project.
+Built files will be located at these paths: `client/build` and `server/build`
