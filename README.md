@@ -4,7 +4,7 @@
 
 1. Sign up for [SingleStore](https://www.singlestore.com/) and create a database
 2. Create an `.env` file based on the `.env.sample` file
-3. Install dependencies once by running: `npm run i`
+3. Install dependencies once by running: `npm i`
 4. Start development environment by running: `npm run dev`
 5. Open [http://localhost:3000](http://localhost:3000) with your browser.
 
