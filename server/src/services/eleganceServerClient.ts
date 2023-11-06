@@ -5,7 +5,9 @@ export const eleganceServerClient = createEleganceServerClient("kai", {
     uri: process.env.DB_URI ?? "",
     database: process.env.DB_NAME ?? ""
   },
-  openai: {
-    apiKey: process.env.OPENAI_API_KEY
+  ai: {
+    openai: {
+      apiKey: process.env.OPENAI_API_KEY
+    }
   }
 });
