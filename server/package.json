@@ -9,7 +9,7 @@
     "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
-    "@singlestore/elegance-sdk": "^0.0.8",
+    "@singlestore/elegance-sdk": "^0.0.9",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
