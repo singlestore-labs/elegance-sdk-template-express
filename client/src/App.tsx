@@ -31,12 +31,17 @@ function App() {
           <img src="/elegance-sdk.svg" alt="Elegance SDK Logo" className="absolute top-0 left-0 w-full h-full" />
         </div>
 
-        <div className="mt-auto flex w-full max-w-3xl flex-col items-start justify-center pb-16">
+        <div className="mt-auto flex w-full max-w-4xl flex-col items-start justify-center pb-16">
           <p className="text-center text-lg font-medium">
             SingleStore Elegance SDK is an NPM package that helps developers quickly and easily connect to
             SingleStoreDB, and build React.js-based applications with SingleStore Kai™ and MySQL connection support.
           </p>
           <div className="flex mt-8 lg:mt-16 flex-wrap w-full max-w-full items-stretch justify-center gap-4 lg:gap-10">
+            <Card
+              href="https://www.singlestore.com/blog/how-to-get-started-with-elegance-sdk/"
+              title="Get started"
+              text="Your step-by-step guide to using Elegance SDK"
+            />
             <Card
               href="https://github.com/singlestore-labs/elegance-sdk/tree/main/packages/singlestore-elegance-sdk#usage"
               title="Docs"
