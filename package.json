@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "dotenv -- npm-run-all --parallel build:*",
-    "build:client": "cd client && npm run build",
-    "build:server": "cd server && npm run build",
+    "build:client": "dotenv -- npm --prefix ./client run build",
+    "build:server": "dotenv -- npm --prefix ./server run build",
     "dev": "dotenv -- npm-run-all --parallel dev:*",
-    "dev:client": "cd client && npm run start",
-    "dev:server": "cd server && npm run dev"
+    "dev:client": "dotenv -- npm --prefix ./client run dev",
+    "dev:server": "dotenv -- npm --prefix ./server run dev"
   },
   "keywords": [],
   "author": "",
