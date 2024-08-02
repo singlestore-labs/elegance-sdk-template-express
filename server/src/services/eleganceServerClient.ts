@@ -1,16 +1,16 @@
 import { createEleganceServerClient } from "@singlestore/elegance-sdk/server";
 
-let cert;
-
-fetch("https://portal.singlestore.com/static/ca/singlestore_bundle.pem")
-  .then(function (response) {
-    response.text().then(function (text) {
-      cert = text;
-    });
-  })
-
 let extraSettings;
+
+
 if (process.env.REACT_APP_TIER === "shared") {
+  let cert;
+  fetch("https://portal.singlestore.com/static/ca/singlestore_bundle.pem")
+    .then(function (response) {
+      response.text().then(function (text) {
+        cert = text;
+      });
+    })
   extraSettings = {
     ssl: {
       cert
