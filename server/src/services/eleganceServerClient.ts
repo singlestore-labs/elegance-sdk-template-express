@@ -1,11 +1,31 @@
 import { createEleganceServerClient } from "@singlestore/elegance-sdk/server";
 
+let extraSettings;
+
+
+if (process.env.REACT_APP_TIER === "shared") {
+  let cert;
+  fetch("https://portal.singlestore.com/static/ca/singlestore_bundle.pem")
+    .then(function (response) {
+      response.text().then(function (text) {
+        cert = text;
+      });
+    })
+  extraSettings = {
+    ssl: {
+      cert
+    }
+  }
+}
+
 export const eleganceServerClient = createEleganceServerClient("mysql", {
   connection: {
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    host: process.env.REACT_APP_DB_HOST,
+    user: process.env.REACT_APP_REACT_APP_DB_USER,
+    password: process.env.REACT_APP_DB_PASSWORD,
+    database: process.env.REACT_APP_DB_NAME,
+    port: Number(process.env.REACT_APP_DB_PORT),
+    ...extraSettings
   },
   ai: {
     openai: {
